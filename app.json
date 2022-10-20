@@ -1,0 +1,47 @@
+{
+    "name": " BitcoinPriceTickerTwitterBot",
+    "description": "Tweets the current price of bitcoin every 5 minutes",
+    "logo": "https://pbs.twimg.com/profile_images/1582992863834820608/Ib9AYsXw_400x400.jpg",
+    "keywords": [
+      "twitter-bot",
+      "bitcoin"
+    ],
+    "website": "https://github.com/kevinnadar22/",
+    "repository": "https://github.com/kevinnadar22/BitcoinPriceTickerTwitterBot",
+    "env": {
+      "API_KEY": {
+        "value": ""
+      },
+      "API_SECRET": {
+        "value": ""
+      },
+      "BEARER_TOKEN": {
+        "value": ""
+      },
+      "ACCESS_TOKEN": {
+       
+        "value": ""
+
+      },
+      "ACCESS_TOKEN_SECRET": {
+        "value": ""
+      },
+      "SLEEP_TIME": {
+        "description": "Time interval for each tweet in seconds",
+        "value": "300",
+        "required": false}
+    },
+    "addons": [],
+    "buildpacks": [
+      {
+        "url": "heroku/python"
+      }
+    ],
+    "formation": {
+      "worker": {
+        "quantity": 1,
+        "size": "free"
+      }
+    }
+  }
+  
