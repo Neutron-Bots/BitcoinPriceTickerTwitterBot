@@ -54,7 +54,7 @@ async def main():
         try:
             await tweet_the_price(client)
         except Exception as e:
-            traceback.print_exc()
+            print(e)
             
         await asyncio.sleep(SLEEP_TIME)
 

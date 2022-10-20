@@ -41,4 +41,6 @@ Details:
 Change: {symbol}{price_change_24h}$
 24H Low = ${low_24h}🔻
 24H High = ${high_24h}💹
+
+#bitcoin #btc
 """
