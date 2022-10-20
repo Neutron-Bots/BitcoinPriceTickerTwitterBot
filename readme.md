@@ -25,19 +25,19 @@ Refer this [video](https://www.youtube.com/watch?v=BdmUhQnPToM)
 Clone the project
 
 ```bash
-  git clone https://github.com/kevinnadar22/BitcoinPriceTickerTwitterBot
+git clone https://github.com/kevinnadar22/BitcoinPriceTickerTwitterBot
 ```
 
 Go to the project directory
 
 ```bash
-  cd BitcoinPriceTickerTwitterBot
+cd BitcoinPriceTickerTwitterBot
 ```
 
 Install dependencies
 
 ```bash
-  pip3 install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 > Change The Vars Of config.py File Accordingly
@@ -46,7 +46,7 @@ Install dependencies
 Start the server
 
 ```bash
-  python3 -m main
+python3 -m main
 ```
 
 ## Deploy in Heroku or Replit
