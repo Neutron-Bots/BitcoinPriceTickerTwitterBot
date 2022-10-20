@@ -1,5 +1,6 @@
 # Importing Tweepy
 import asyncio
+import traceback
 import tweepy
 from config import ACCESS_TOKEN, API_SECRET, API_KEY, BEARER_TOKEN, ACCESS_TOKEN_SECRET, REPLIT, SLEEP_TIME
 from utils import BTCTicker, ping_server
@@ -50,10 +51,13 @@ async def main():
         asyncio.create_task(ping_server())
 
     while True:
-        await tweet_the_price(client)
+        try:
+            await tweet_the_price(client)
+        except Exception as e:
+            traceback.print_exc()
+            
         await asyncio.sleep(SLEEP_TIME)
 
 if __name__ ==  "__main__":
     print("Bot started Running")
     asyncio.run(main())
-

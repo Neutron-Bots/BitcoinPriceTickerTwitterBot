@@ -42,7 +42,7 @@ async def BTCTicker():
         )
         return info_message_reply_text, detail_message_reply_text
     except Exception as e:
-        print(e)
+        traceback.print_exc()
 
 async def ping_server():
     sleep_time = PING_INTERVAL
