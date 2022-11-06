@@ -7,6 +7,7 @@ Twitter bot to Tweet the current price of bitcoin every 5 minutes. Made by Tweep
 
 ### Required Variables
 
+
 | Variable Name                        |                                                                                                                                                       
 | ------------------------------------ | 
 | `API_KEY` (required)                  |                                                                                           
@@ -24,7 +25,7 @@ Refer this [video](https://www.youtube.com/watch?v=BdmUhQnPToM)
 Clone the project
 
 ```bash
-git clone https://github.com/kevinnadar22/BitcoinPriceTickerTwitterBot
+git clone https://github.com/Neutron-Bots/BitcoinPriceTickerTwitterBot
 ```
 
 Go to the project directory
@@ -52,8 +53,8 @@ python3 -m main
 
 | Name              | Deploy        |
 | ----------------- | ------------- | 
-| Replit (Recommended) | [Deploy](https://replit.com/github/kevinnadar22/BitcoinPriceTickerTwitterBot) |
-| Heroku | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kevinnadar22/BitcoinPriceTickerTwitterBot)                          |
+| Replit (Recommended) | [Deploy](https://replit.com/github/Neutron-Bots/BitcoinPriceTickerTwitterBot) |
+| Heroku | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Neutron-Bots/BitcoinPriceTickerTwitterBot)                          |
 
 
 
