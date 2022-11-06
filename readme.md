@@ -7,7 +7,6 @@ Twitter bot to Tweet the current price of bitcoin every 5 minutes. Made by Tweep
 
 ### Required Variables
 
-
 | Variable Name                        |                                                                                                                                                       
 | ------------------------------------ | 
 | `API_KEY` (required)                  |                                                                                           
