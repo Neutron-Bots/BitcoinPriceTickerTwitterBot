@@ -242,7 +242,7 @@ class TwitterUIFlow:
                 {
                     "subtask_id": "AccountDuplicationCheck",
                     "check_logged_in_account": {
-                        "link": "AccountDuplicationCheck_false"
+                        "link": "AccountDuplicationCheck_False"
                     },
                 }
             ],
@@ -629,6 +629,55 @@ class TwitterUIFlow:
         self.__error_check()
         return self
 
+    def CreateQuoteTweet(self, tweet_text, attachment_url=""):
+        data = {
+            "queryId": "rKfRn_Qf3U79SMqGQ01s8A",
+            "variables": json.dumps(
+                {
+                    "tweet_text": tweet_text,
+                    "attachment_url": attachment_url,
+                    "media": {"media_entities": [], "possibly_sensitive": False},
+                    "withDownvotePerspective": False,
+                    "withReactionsMetadata": False,
+                    "withReactionsPerspective": False,
+                    "withSuperFollowsTweetFields": True,
+                    "withSuperFollowsUserFields": False,
+                    "semantic_annotation_ids": [],
+                    "dark_request": False,
+                    "withBirdwatchPivots": False,
+                }
+            ),
+            "features": {
+                "tweetypie_unmention_optimization_enabled": True,
+                "responsive_web_edit_tweet_api_enabled": True,
+                "graphql_is_translatable_rweb_tweet_is_translatable_enabled": True,
+                "view_counts_everywhere_api_enabled": True,
+                "longform_notetweets_consumption_enabled": True,
+                "tweet_awards_web_tipping_enabled": False,
+                "interactive_text_enabled": True,
+                "responsive_web_text_conversations_enabled": False,
+                "longform_notetweets_rich_text_read_enabled": True,
+                "longform_notetweets_inline_media_enabled": False,
+                "responsive_web_graphql_exclude_directive_enabled": True,
+                "verified_phone_label_enabled": True,
+                "freedom_of_speech_not_reach_fetch_enabled": True,
+                "standardized_nudges_misinfo": True,
+                "tweet_with_visibility_results_prefer_gql_limited_actions_policy_enabled": False,
+                "responsive_web_graphql_skip_user_profile_image_extensions_enabled": False,
+                "responsive_web_graphql_timeline_navigation_enabled": True,
+                "responsive_web_enhance_cards_enabled": False,
+            },
+        }
+        response = self.session.post(
+            "https://twitter.com/i/api/graphql/rKfRn_Qf3U79SMqGQ01s8A/CreateTweet",
+            headers=self.__get_headers(),
+            json=data,
+            proxies=self.proxies,
+        ).json()
+        self.content = response
+        self.__error_check()
+        return self
+
     def NoteTweet(self, tweet_text, in_reply_to_tweet_id="0"):
         data = {
             "queryId": "pwQhmvJv6I58pPtbjMzs2Q",
@@ -984,8 +1033,7 @@ class TwitterUIFlow:
             if "addEntries" in instruction:
                 for entry in instruction["addEntries"]["entries"]:
                     if entry["entryId"].startswith("cursor-top-"):
-                        self.mentions_cursor = entry["content"]["operation"][
-                            "cursor"
-                        ]["value"]
+                        self.mentions_cursor = entry["content"]["operation"]["cursor"][
+                            "value"
+                        ]
         return self
-
