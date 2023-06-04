@@ -1,5 +1,6 @@
 # Importing Tweepy
 import asyncio
+import os
 from twitterapi import TwitterUIFlow
 from config import SERVER_URL, SLEEP_TIME
 from utils import BTCTicker, ping_server
@@ -38,7 +39,7 @@ async def main():
     if SERVER_URL:
         await keep_alive()
         asyncio.create_task(ping_server())
-        
+
     flow = TwitterUIFlow()
     flow.LoadCookies("cookies.json")
 
@@ -53,4 +54,9 @@ async def main():
 
 if __name__ == "__main__":
     print("Bot started Running")
+
+    if not os.path.exists("cookies.json"):
+        print("Please Login to Twitter by\n\npython login.py")
+        exit()
+
     asyncio.run(main())
