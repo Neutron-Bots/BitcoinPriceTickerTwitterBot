@@ -1,4 +1,5 @@
-tweepy
+requests
 aiohttp
 pycoingecko
 python-dotenv
+flask
