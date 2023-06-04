@@ -38,18 +38,9 @@ Start the server
 python3 -m main
 ```
 
-## Deploy in Heroku or Replit
-
-| Name                 | Deploy                                                                                                                                                    |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Replit (Recommended) | [Deploy](https://replit.com/github/Neutron-Bots/BitcoinPriceTickerTwitterBot)                                                                             |
-| Heroku               | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Neutron-Bots/BitcoinPriceTickerTwitterBot) |
-
 ## Tech Stack
 
 **Language:** Python 3.10.6
-
-**Library:** tweepy
 
 ## Authors
 
